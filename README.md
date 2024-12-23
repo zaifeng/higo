@@ -34,5 +34,17 @@
   ```
 
 - 提交后的操作
+
   - 只增不删（也就是说，即便你删除远程分支，依然可以通过命令来安装,可能出于兼容性考虑）
   - `go install` 安装的是`tag`，不是`release`
+
+- `git remote`调整命令
+  - 直接修改
+  ```
+      git remote set-url origin git@github.com:user/repo.git
+  ```
+  - 删除后添加
+  ```
+      git remote rm origin
+      git remote add origin git@github.com:user/repo.git
+  ```
